@@ -12,8 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SavedMovie"
-            android:parentActivityName=".MainActivity"></activity>
+            android:name=".SavedMovie"></activity>
         <activity
             android:name=".MovieDetail"
             android:parentActivityName=".MainActivity"/>

@@ -5,13 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SavedMovie">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:id="@+id/savedGridTab">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSearchFromSaved"
+            android:drawableTop="@drawable/ic_search_black_24dp"
+            android:paddingVertical="15dp"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:text="search movie"
+            android:layout_alignParentLeft="true"
+            android:layout_columnWeight="1"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@color/colorAccent"
+            android:drawableTop="@drawable/ic_save_black_24dp"
+            android:paddingVertical="15dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorAccent"
+            android:text="saved movie"
+            android:layout_alignParentRight="true"
+            android:layout_toEndOf="@+id/btnSearchFromSaved"
+            android:layout_columnWeight="1"/>
+    </GridLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvNotesSaved"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:text="No saved movies :("
+        android:text="No saved movie :("
         android:textSize="32sp"
         android:textColor="@color/colorPrimary"
         />
@@ -19,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/recyclerViewSaved"
+        android:layout_below="@+id/savedGridTab"
         android:layout_marginTop="10dp"
         tools:listitem="@layout/main_menu_item"/>
 </RelativeLayout>
